@@ -15,8 +15,23 @@
  */
 #include <stdio.h>
 
-int main() {
-	// printf() displays the string inside quotation
-	printf("Ptr_not_costant_data_costant");
+void printChar(const char *sPtr);
+
+int main()
+{
+	char s[] = "Hello Davide";
+
+	puts("The string is: ");
+	printChar(s);
+	puts("");
+
 	return 0;
+}
+
+void printChar(const char *sPtr)
+{
+	for(;*sPtr != '\0'; ++sPtr)
+	{
+		printf("%c", *sPtr);
+	}
 }
